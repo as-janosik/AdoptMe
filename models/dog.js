@@ -34,7 +34,7 @@ Dog.init(
     },
     {
         sequelize,
-        
+        modelname: 'dog'
     }
 )
 
