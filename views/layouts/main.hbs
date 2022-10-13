@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdoptMe administrator portal</title>
+  <link rel="stylesheet" href="/public/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <header class="display-flex">
+
+        <h1 class="display-1"> 
+            <a href="/">Home</a>
+        </h1>
+        <nav class="display-5">
+        {{#if logged_in}}
+
+        {{!-- Need a /dogs route --}}
+
+        <a href="/dogs">View all dogs</a> |
+        <button class="no-button text-danger" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        {{{ body }}}
+
+    </main>
+    <footer>
+
+
+    </footer>
+
+    {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
+</body>
+
+</html>
