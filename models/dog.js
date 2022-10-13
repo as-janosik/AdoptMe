@@ -21,10 +21,12 @@ Dog.init(
         },
         dateAdded: {
             type: DataTypes.DATEONLY,
+            defaultValue: DataTypes.NOW,
             allowNull: false,
         },
         available: {
             type: DataTypes.BOOLEAN,
+            defaultValue: true,
             allowNull: false,
         },
         addedBy: {
