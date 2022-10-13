@@ -33,7 +33,7 @@ Dog.init(
             type: DataTypes.STRING,
             allowNull: false,
             references: {
-                model: User,
+                model: "user",
                 key: 'username'
             }
         }
