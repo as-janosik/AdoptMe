@@ -1,0 +1,32 @@
+[
+  {
+    "username": "bigPumpkin",
+    "firstName": "Big",
+    "lastName": "Pumpkin",
+    "password": "password12345"
+  },
+  {
+    "username": "scaryGhost",
+    "firstName": "Scary",
+    "lastName": "Ghost",
+    "password": "password12345"
+  },
+  {
+    "username": "blackCat",
+    "firstName": "Black",
+    "lastName": "Cat",
+    "password": "password12345"
+  },
+  {
+    "username": "spookyMonster",
+    "firstName": "Spooky",
+    "lastName": "Monster",
+    "password": "password12345"
+  },
+  {
+    "username": "ditchWitch",
+    "firstName": "Ditch",
+    "lastName": "Witch",
+    "password": "password12345"
+  }
+]
