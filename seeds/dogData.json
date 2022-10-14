@@ -1,0 +1,37 @@
+[
+    {
+        "dog_name": "Santas Little Helper",
+        "breed": "Little dog",
+        "dateAdded": "09-10-2022",
+        "available": true,
+        "addedBy": "bigPumpkin"
+    },
+    {
+        "dog_name": "Sandlot Dog",
+        "breed": "Big dog",
+        "dateAdded": "09-29-2022",
+        "available": true,
+        "addedBy": "blackCat"
+    },
+    {
+        "dog_name": "Clifford",
+        "breed": "Big Red dog",
+        "dateAdded": "07-24-2022",
+        "available": true,
+        "addedBy": "scaryGhost"
+    },
+    {
+        "dog_name": "Cujo",
+        "breed": "Deadly dog",
+        "dateAdded": "03-29-2022",
+        "available": true,
+        "addedBy": "spookyMonster"
+    },
+    {
+        "dog_name": "Lassy",
+        "breed": "Good dog",
+        "dateAdded": "10-05-2022",
+        "available": true,
+        "addedBy": "ditchWitch"
+    }
+]
