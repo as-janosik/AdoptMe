@@ -6,7 +6,7 @@ class Dog extends Model {}
 Dog.init(
     {
         id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
@@ -40,7 +40,10 @@ Dog.init(
     },
     {
         sequelize,
-        modelname: 'dog'
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'dog',
     }
 )
 
