@@ -4,6 +4,7 @@
         "breed": "Little dog",
         "dateAdded": "09-10-2022",
         "available": true,
+        "url":"https://i.imgur.com/H37kxPH.jpeg",
         "addedBy": "bigPumpkin"
     },
     {
@@ -11,6 +12,7 @@
         "breed": "Big dog",
         "dateAdded": "09-29-2022",
         "available": true,
+        "url":"https://i.imgur.com/GJhXjvN.jpeg",
         "addedBy": "blackCat"
     },
     {
@@ -18,6 +20,7 @@
         "breed": "Big Red dog",
         "dateAdded": "07-24-2022",
         "available": true,
+        "url":"https://i.imgur.com/klP3bs8.jpeg",
         "addedBy": "scaryGhost"
     },
     {
@@ -25,6 +28,7 @@
         "breed": "Deadly dog",
         "dateAdded": "03-29-2022",
         "available": true,
+        "url":"https://i.imgur.com/ln2TnDJ.jpeg",
         "addedBy": "spookyMonster"
     },
     {
@@ -32,6 +36,7 @@
         "breed": "Good dog",
         "dateAdded": "10-05-2022",
         "available": true,
+        "url":"https://i.imgur.com/c523I1g.jpeg",
         "addedBy": "ditchWitch"
     }
 ]

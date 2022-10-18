@@ -28,6 +28,10 @@ Dog.init(
             type: DataTypes.BOOLEAN,
             defaultValue: true,
             allowNull: false,
+        },        
+        url: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         addedBy: {
             type: DataTypes.STRING,
