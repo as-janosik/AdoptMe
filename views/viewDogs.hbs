@@ -1,0 +1,16 @@
+ {{#each dogs as |dog|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h1><a href="/dogs/{{dog.id}}">{{dog.name}}</a></h4>
+        <h2>{{breed}}</h2>
+         <img src="{{url}}" alt="dog-photo">  {{!-- response.body.data.link --}}
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{dog.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
