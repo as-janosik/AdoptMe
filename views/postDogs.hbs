@@ -1,0 +1,45 @@
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Post:</h3>
+
+    <form class="form new-dog-form">
+      <div class="form-group">
+        <label for="dog-name">Dog's Name:</label>
+        <input class="form-input" type="text" id="dog-name" name="dog-name" />
+      </div>
+      <div class="form-group">
+        <label for="dog-breed">Breed:</label>
+        <textarea class="form-input" id="dog-breed" name="dog-breed"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="dog-photo">Dog Photo:</label>
+        <input type= "file" id="dog-photo" name="dog-photo" accept="image/png, image/jpeg"> 
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  
+
+  {{#if post.length}}
+  <div class="col-md-6 post-list">
+    <h3>Current Posts:</h3>
+
+    {{#each posts as |post|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/posts/{{post.id}}">{{post.title}}</a></h4>
+        <h2>{{description}}</h2>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/postDogs.js"></script>
