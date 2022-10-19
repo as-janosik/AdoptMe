@@ -19,12 +19,14 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       // If successful, redirect the browser to the profile page
       // Won't be replace('/profile'); for our project
-      document.location.replace('/profile'); 
+      document.location.replace('/postDogs'); 
     } else {
       alert(response.statusText);
     }
   }
 };
+
+//IS REPLACE /postDogs CORRECT?
 
 
 //Take values from signup form and make a new user profile
@@ -44,7 +46,7 @@ const signupFormHandler = async (event) => {
 
     //Won't be replace('/profile') for our project - will probably just go to the main page to view or create dogs
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/postDogs');
     } else {
       alert(response.statusText);
     }

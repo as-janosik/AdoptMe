@@ -7,9 +7,9 @@ const logout = async () => {
   });
 
   //If it logs out successfully, go to the home page
-
+//Would it be replace /main?
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace('/main');
   } else {
     alert(response.statusText);
   }
