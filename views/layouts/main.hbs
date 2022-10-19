@@ -21,44 +21,26 @@
 
         {{!-- Need a /dogs route --}}
 
-        <a href="/dogs">View all dogs</a> |
+        <a href="/viewDogs">View all dogs</a> |
         <button class="no-button text-danger" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
         </nav>
 
+        {{!-- Will all the hrefs in this main page work? --}}
+
     </header>
 
+      <main class="container">
+      {{{ body }}}
+      </main>
+  
 
-    <main class="container">
-
- <form class="form new-dog-form">
-      <div class="form-group">
-        <label for="dog-name">Dog's Name:</label>
-        <input class="form-input" type="text" id="dog-name" name="dog-name" />
-      </div>
-      <div class="form-group">
-        <label for="dog-breed">Breed:</label>
-        <textarea class="form-input" id="dog-breed" name="dog-breed"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="dog-photo">Dog Photo:</label>
-        <input type= "file" id="dog-photo" name="dog-photo" accept="image/png, image/jpeg"> 
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
-
-        {{{ body }}}
-
-    </main>
-    <footer>
+      <footer>
 
 
-    </footer>
+      </footer>
 
     {{#if logged_in}}
   <script src="/js/logout.js"></script>

@@ -1,16 +1,16 @@
+ {{!-- NOT SURE IF EACH DOGS AS DOG WILL WORK --}}
+ 
  {{#each dogs as |dog|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h1><a href="/dogs/{{dog.id}}">{{dog.name}}</a></h4>
-        <h2>{{breed}}</h2>
+    <div class="card" style= "width: 22rem; margin: 10px;">
+      <div class="card-body">
+        <h1 class="card-title" style = "color: navy; font-weight: bold">{{dog_name}}</h1>
+        <h4 class="card-text">{{breed}}</h4>
          <img src="{{url}}" alt="dog-photo">  {{!-- response.body.data.link --}}
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{dog.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
-  </div>
-  {{/if}}
-</div>
 
+{{!-- TOOK AWAY HREF ON LINE 6 - that would be if we could view by id --}}
+{{!-- TOOK AWAY<button class="btn btn-sm btn-danger" data-id="{{dog.id}}">DELETE</button> worry about delete later --}}
+
+{{!-- Is there an easy way to get the cards of the dogs to show? - bootstrap card class? --}}

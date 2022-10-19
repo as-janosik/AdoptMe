@@ -26,6 +26,9 @@ router.post('/login', async (req, res) => {
         firstName: req.body.firstName, 
         lastName: req.body.lastName } 
     });
+    //Don't think we need all of these above - just username - 
+
+    //DO WE NEED ALL OF THESE FOR A LOGIN? username, firsName, lastName?
 
     if (!userData) {
       res
