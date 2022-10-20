@@ -1,15 +1,15 @@
  {{!-- NOT SURE IF EACH DOGS AS DOG WILL WORK --}}
- 
+ <div class="container-fluid row justify-content-evenly my-4">
  {{#each dogs as |dog|}}
-    <div class="card" style= "width: 22rem; margin: 10px;">
+    <div class="card bg-light col-12 col-md-3 my-3 mx-2 shadow">
       <div class="card-body">
-        <h1 class="card-title" style = "color: navy; font-weight: bold">{{dog_name}}</h1>
-        <h4 class="card-text">{{breed}}</h4>
-         <img src="{{url}}" alt="dog-photo">  {{!-- response.body.data.link --}}
+        <h1 class="card-title text-center" style = "color: navy; font-weight: bold">{{dog_name}}</h1>
+        <h4 class="card-text text-center">{{breed}}</h4>
+         <img class="img-thumbnail" src="{{url}}" alt="dog-photo">  {{!-- response.body.data.link --}}
       </div>
     </div>
     {{/each}}
-
+</div>
 {{!-- TOOK AWAY HREF ON LINE 6 - that would be if we could view by id --}}
 {{!-- TOOK AWAY<button class="btn btn-sm btn-danger" data-id="{{dog.id}}">DELETE</button> worry about delete later --}}
 
