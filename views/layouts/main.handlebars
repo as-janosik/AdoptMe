@@ -9,38 +9,52 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
-    
-    <header class="display-flex">
-
-        <h1 class="display-1"> 
-            <a href="/">Home</a>
-        </h1>
-        <nav class="display-5">
+<body class="bg-light.bg-gradient">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
         {{#if logged_in}}
-
-        {{!-- Need a /dogs route --}}
-
-        <a href="/viewDogs">View all dogs</a> |
-        <button class="no-button text-danger" id="logout">logout</button>
+        <a class="nav-link" href="/Viewdogs">Dogs</a>
+        <a class="nav-link text-danger" id="logout">logout</a>
         {{else}}
-        <a href="/login">login</a>
+        <a class="nav-link" href="/login">Login</a>
         {{/if}}
+      </div>
+    </div>
+  </div>
+</nav>
+    
+    {{!-- <header class="display-flex">
+        <nav class="display-5">
+        #if logged_in
+
+       
+
+        <a href="/dogs">View all dogs</a> |
+        <button class="no-button text-danger" id="logout">logout</button>
+        else
+        <a href="/login">login</a>
+        /if
         </nav>
 
-        {{!-- Will all the hrefs in this main page work? --}}
+    </header> --}}
+    <main class="container">
 
-    </header>
 
-      <main class="container">
+      
       {{{ body }}}
-      </main>
-  
-
-      <footer>
 
 
-      </footer>
+    </main>
+    <footer>
+
+
+    </footer>
 
     {{#if logged_in}}
   <script src="/js/logout.js"></script>
