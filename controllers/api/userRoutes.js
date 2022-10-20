@@ -22,8 +22,15 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { 
-        username: req.body.username, } 
+
+        username: req.body.username
+      } 
     });
+
+    //Don't think we need all of these above - just username - 
+
+    //DO WE NEED ALL OF THESE FOR A LOGIN? username, firsName, lastName?
+
 
     if (!userData) {
       res
@@ -33,7 +40,7 @@ router.post('/login', async (req, res) => {
     }
 
     const validPassword = await userData.checkPassword(req.body.password);
-
+console.log(validPassword);
     if (!validPassword) {
       res
         .status(400)
@@ -49,7 +56,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 

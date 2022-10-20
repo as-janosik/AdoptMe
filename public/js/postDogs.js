@@ -1,39 +1,33 @@
-const imageToBase64 = require('image-to-base64');
-const request = require('request');
-
 function loadimage(passedFile){
     console.log(passedFile);
-    imageToBase64(passedFile)// Path to the image
-    .then(
-        (response) => {
-            //console.log(response); // "cGF0aC90by9maWxlLmpwZw=="
-            makeCall(response);
-        }
-    )
-    .catch(
-        (error) => {
-            console.log(error); // Logs an error if there was one
-        }
-    )}
+    makeCall(passedFile)// Path to the image
+}
 
-function makeCall(inString){
+async function makeCall(inString){
     var options = {
         'method': 'POST',
-        'url': 'https://api.imgur.com/3/upload',
         'headers': {
             'Authorization': 'Bearer 5eeae49394cd929e299785c8805bd168fc675280'
         },
-        formData: {
+        body: JSON.stringify({
             'image': inString,
-            'type':'base64'
-        }
+            'type':'file'
+        })
     };
     //console.log(options);
+    const response = await fetch('https://api.imgur.com/3/upload', 
+        options,
+        
+    );
 
-request(options, function (error, response) {
-    if (error) throw new Error(error);
-    console.log(response.body);
-});}
+    const data = await response.json();
+    console.log(data);
+
+// request(options, function (error, response) {
+//     if (error) throw new Error(error);
+//     console.log(response.body);
+// })
+}
 
 // input.addEventListener('click', loadimage);
 //const fileInput = document.getElementById('input');

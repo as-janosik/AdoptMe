@@ -35,7 +35,9 @@ router.get('/viewdogs', async (req, res) => {
 //Route to get to postDogs
 router.get('/postDogs', async (req, res) => {
   try {
-    res.render('postDogs');
+    res.render('postDogs', {
+     logged_in: req.session?.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -46,7 +48,7 @@ router.get('/postDogs', async (req, res) => {
 //Route to get to login
 router.get('/login', (req, res) => {
   if (req.session?.logged_in) {
-    res.redirect('/');
+    res.redirect('/postDogs');
     return;
   }
   res.render('login');
