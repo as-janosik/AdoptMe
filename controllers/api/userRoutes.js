@@ -22,13 +22,8 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { 
-        username: req.body.username, 
-        firstName: req.body.firstName, 
-        lastName: req.body.lastName } 
+        username: req.body.username, } 
     });
-    //Don't think we need all of these above - just username - 
-
-    //DO WE NEED ALL OF THESE FOR A LOGIN? username, firsName, lastName?
 
     if (!userData) {
       res
