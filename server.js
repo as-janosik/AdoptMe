@@ -14,7 +14,8 @@ const hbs = exphbs.create({ helpers });
 
 // view engine setup
 app.engine('handlebars', hbs.engine);
-app.set('view engine', 'hbs');
+app.set('view engine', 'handlebars');
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -34,8 +35,10 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
+  if (err){
   res.status(err.status || 500);
   res.render('error');
+  }
 });
 
 sequelize.sync({ force: false }).then(() => {
