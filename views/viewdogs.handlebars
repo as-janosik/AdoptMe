@@ -2,11 +2,12 @@
 
  <div class="container-fluid row justify-content-evenly my-4">
  {{#each dogs as |dog|}}
-    <div class="card bg-light col-12 col-md-3 my-3 mx-2 shadow">
-      <div class="card-body">
-        <h1 class="card-title text-center" style = "color: navy; font-weight: bold">{{dog_name}}</h1>
+    <div class="card bg-light col-12 col-md-3 my-3 mx-2 shadow text-center">
+      <img class="card-img-top my-3" src="{{url}}" alt="dog-photo">  {{!-- response.body.data.link --}}
+      <div class="card-body d-flex flex-column">
+        <h1 class="card-title mt-auto" style = "color: navy; font-weight: bold">{{dog_name}}</h1>
         <h4 class="card-text text-center">{{breed}}</h4>
-         <img class="img-thumbnail" src="{{url}}" alt="dog-photo">  {{!-- response.body.data.link --}}
+        <a class="btn btn-primary mt-auto" href="/dogpage/{{dog.id}}">View</a>
       </div>
     </div>
     {{/each}}
