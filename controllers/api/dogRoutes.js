@@ -8,9 +8,9 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
     try {
         const newDog = await Dog.create({
-            ...req.body,
-            user_id: req.session.user_id
-            //Not sure if we need the user_id: line
+            ...req.body//,
+            //addedBy: req.session.user_id//This is not working for adding to the request body. Missing and required.
+            
         });
         res.status(200).json(newDog);
     }   catch (err) {
