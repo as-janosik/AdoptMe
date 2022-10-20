@@ -29,8 +29,28 @@ router.get('/viewdogs', async (req, res) => {
   }
 });
 
-//ERROR PAGE WILL NEED ITS OWN ROUTE I BELIEVE
+router.get('/dogpage/:id', async (req, res) => {
+  try {
+    const dogData = await Dog.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
 
+    const dog = dogData.get({plain: true})
+    console.log(dog);
+    
+    res.render('dogPage', { 
+      dog, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //Route to get to postDogs
 router.get('/postDogs', async (req, res) => {
