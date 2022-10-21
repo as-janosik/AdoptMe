@@ -29,4 +29,4 @@ GitHub URL: https://github.com/as-janosik/AdoptMe
 
 ## Screenshot of application:
 
-![Screenshot of application working](/assets/Happy-Valley-Screenshot.png)
+![Screenshot of application working](assets/Happy-Valley-Screenshot.png)
